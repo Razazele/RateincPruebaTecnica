@@ -33,12 +33,35 @@ function readLine() {
  */
 
 function miniMaxSum(arr) {
+    //MIN VALUES
+    const sortedMin = [...arr]
+    sortedMin.sort(function(a, b) {
+        return a - b;
+      });
 
+    sortedMin.pop()
     let min = 0
     let max = 0
-    arr.map( (a) =>{
+    // GET MIN VAL
+    sortedMin.map((a) => {
+        min = min + a
+    })
+    //max values
+    const sortedMax = [...arr]
 
-    } )
+    sortedMax.sort(function(a, b) {
+        return a - b;
+      }).reverse();
+    sortedMax.pop()
+    // GET MIN VAL
+    sortedMax.map((a) => {
+        max = max + a
+    })
+
+    //GET MAX VAL
+
+    console.log(min + " " + max)
+
 
 }
 
